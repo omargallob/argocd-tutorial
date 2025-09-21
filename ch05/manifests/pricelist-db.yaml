@@ -23,6 +23,11 @@ spec:
       containers:
       - image: mysql:5.6.51
         name: mysql
+        resources:
+          requests:
+            memory: "750Mi"
+          limits:
+            memory: "1250Mi" 
         env:
         - name: MYSQL_DATABASE
           value: pricelist

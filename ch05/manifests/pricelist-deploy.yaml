@@ -34,6 +34,11 @@ spec:
           value: mysql
         - name: MYSQL_SERVICE_PORT
           value: "3306"
+        resources:
+          requests:
+            memory: "500Mi"
+          limits:
+            memory: "750Mi"
         readinessProbe:
           httpGet:
             path: /
